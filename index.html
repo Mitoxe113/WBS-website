@@ -4,21 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathly</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script defer src="assets/scripts.js"></script>
 </head>
 <body>
     <header>
-        <img src="ente-logo.png" alt="Ente Logo" class="logo" style="width: 80px; position: absolute; top: 10px; left: 10px;">
-        <h1>Mathly!</h1>
-        <p>Mathematik-Aufgaben für die 10. Klasse Realschule – Baden-Württemberg</p>
+        <img src="assets/ente-logo.png" alt="Ente Logo" class="logo">
+        <div class="header-title">
+            <h1>Mathly</h1>
+            <a href="index.html" class="home-link">Startseite</a>
+        </div>
     </header>
 
-    <main>
-        <section class="dashboard">
-            <div class="subject-links" style="text-align: center;">
-                <a href="mathematik.html#Aufgaben" class="button" style="font-size: 1.5em; padding: 15px 30px;">Aufgaben</a>
-            </div>
-        </section>
-    </main>
+    <nav class="sidebar">
+        <ul>
+            <li class="dropdown">
+                <a href="aufgaben/funktionen/funktionen.html" class="dropdown-toggle">Funktionen</a>
+                <ul class="dropdown-menu">
+                    <li>• <a href="aufgaben/funktionen/lineare.html">Lineare Funktionen</a></li>
+                    <li>• <a href="aufgaben/funktionen/quadratische.html">Quadratische Funktionen</a></li>
+                    <li>• <a href="aufgaben/funktionen/lineare_gleichungen.html">Lineare Gleichungssysteme</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="aufgaben/wahrscheinlichkeit/wahrscheinlichkeit.html" class="dropdown-toggle">Wahrscheinlichkeit</a>
+                <ul class="dropdown-menu">
+                    <li>• <a href="Wahrscheinlichkeit.html#einstufige">Einstufige Zufallsexperimente</a></li>
+                    <li>• <a href="Wahrscheinlichkeit.html#zweistufige">Zweistufige Zufallsexperimente</a></li>
+                    <li>• <a href="Wahrscheinlichkeit.html#erwartungswert">Erwartungswert</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 </body>
 </html>
