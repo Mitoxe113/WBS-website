@@ -55,7 +55,7 @@ header nav ul li a {
 
 /* Sidebar */
 .sidebar {
-    width: 200px;
+    width: 250px;
     background-color: #f1f1f1;
     padding: 20px;
     height: calc(100vh - 100px);
@@ -86,18 +86,6 @@ header nav ul li a {
 
 .home-link:hover {
     text-decoration: underline;
-}
-
-/* Sidebar */
-.sidebar {
-    width: 250px;
-    background-color: #f1f1f1;
-    padding: 20px;
-    height: calc(100vh - 100px);
-    position: fixed;
-    top: 100px;
-    left: 0;
-    border-right: 2px solid #ddd;
 }
 
 .sidebar ul {
@@ -142,6 +130,7 @@ header nav ul li a {
 }
 
 .dropdown-menu li::before {
+    content: "•";
     margin-right: 4px;  /* Geringerer Abstand zwischen Punkt und Text */
     display: inline-block;
     width: 12px;  /* Feste Breite */
@@ -213,9 +202,4 @@ form input {
     width: 100px;
 }
 
-form .solution {
-    margin-top: 15px;
-    color: green;
-    font-weight: bold;
-}
 
