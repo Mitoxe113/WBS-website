@@ -1,0 +1,31 @@
+{
+    "menu": [
+      {
+        "title": "Funktionen",
+        "link": "aufgaben/funktionen/funktionen.html",
+        "items": [
+          {"title": "Lineare Funktionen", "link": "aufgaben/funktionen/lineare.html"},
+          {"title": "Quadratische Funktionen", "link": "aufgaben/funktionen/quadratische.html"},
+          {"title": "Lineare Gleichungssysteme", "link": "aufgaben/funktionen/lineare_gleichungen.html"}
+        ]
+      },
+      {
+        "title": "Wahrscheinlichkeit",
+        "link": "aufgaben/wahrscheinlichkeit/wahrscheinlichkeit.html",
+        "items": [
+          {"title": "Einstufige Zufallsexperimente", "link": "aufgaben/wahrscheinlichkeit/einstufige.html"},
+          {"title": "Zweistufige Zufallsexperimente", "link": "aufgaben/wahrscheinlichkeit/zweistufige.html"},
+          {"title": "Erwartungswert", "link": "aufgaben/wahrscheinlichkeit/erwartungswert.html"}
+        ]
+      },
+      {
+        "title": "Zins",
+        "link": "aufgaben/zins/zins.html",
+        "items": [
+          {"title": "Jahreszins", "link": "aufgaben/zins/jahreszins.html"},
+          {"title": "Monats-, Tageszins", "link": "aufgaben/zins/monats-tageszins.html"},
+          {"title": "Zinseszins", "link": "aufgaben/zins/zinseszins.html"}
+        ]
+      }
+    ]
+  }
