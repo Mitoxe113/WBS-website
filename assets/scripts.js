@@ -3,15 +3,16 @@ class PageLoader {
         this.currentPath = window.location.pathname.toLowerCase();
         // Get the repository name from the path for GitHub Pages
         const pathParts = this.currentPath.split('/');
-        const repoName = pathParts[1] === 'WBS-website' ? '/WBS-website' : '';
+        const isGitHubPages = pathParts[1] === 'WBS-website';
+        const repoName = isGitHubPages ? '/WBS-website' : '';
         
         // Calculate relative path depth
-        this.depth = this.currentPath.split('/').length - (repoName ? 3 : 2);
+        this.depth = this.currentPath.split('/').length - (isGitHubPages ? 3 : 2);
         
         // Set base path considering GitHub Pages
         this.basePath = '../'.repeat(this.depth);
         if (this.currentPath.endsWith('index.html') || this.currentPath.endsWith('/')) {
-            this.basePath = repoName ? repoName + '/' : '';
+            this.basePath = repoName + '/';
         }
     }
 
