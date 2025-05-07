@@ -1,16 +1,26 @@
 class PageLoader {
     constructor() {
         this.currentPath = window.location.pathname.toLowerCase();
-        this.depth = this.currentPath.split('/').length - 2;
+        // Get the repository name from the path for GitHub Pages
+        const pathParts = this.currentPath.split('/');
+        const repoName = pathParts[1] === 'WBS-website' ? '/WBS-website' : '';
+        
+        // Calculate relative path depth
+        this.depth = this.currentPath.split('/').length - (repoName ? 3 : 2);
+        
+        // Set base path considering GitHub Pages
         this.basePath = '../'.repeat(this.depth);
         if (this.currentPath.endsWith('index.html') || this.currentPath.endsWith('/')) {
-            this.basePath = '';
+            this.basePath = repoName ? repoName + '/' : '';
         }
     }
 
     async loadNavigation() {
         try {
             const response = await fetch(this.basePath + 'assets/navigation.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             const data = await response.json();
             this.renderNavigation(data.menu);
             this.attachEventListeners();
